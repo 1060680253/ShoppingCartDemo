@@ -23,9 +23,17 @@ public class CategoryAdapter extends BaseAdapter {
     private LayoutInflater mLayoutInflater;
     private List<CategoryEntity> mDatas = new ArrayList<>();
 
+    public CategoryAdapter(Context context) {
+        mLayoutInflater = LayoutInflater.from(context);
+    }
+
     public CategoryAdapter(Context context,List<CategoryEntity> mDatas) {
         mLayoutInflater = LayoutInflater.from(context);
+    }
+
+    public void setNewData(List<CategoryEntity> mDatas){
         this.mDatas = mDatas;
+        notifyDataSetChanged();
     }
 
     @Override

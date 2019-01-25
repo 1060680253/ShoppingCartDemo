@@ -24,6 +24,7 @@ import java.util.HashMap;
 
 import io.github.sunxu3074.shoppoingdemo.Entity.ShoppingCartEntity;
 import io.github.sunxu3074.shoppoingdemo.R;
+import io.github.sunxu3074.shoppoingdemo.base.BaseActivity;
 import io.github.sunxu3074.shoppoingdemo.consts.ConstUtils;
 import io.github.sunxu3074.shoppoingdemo.db.ProductReadDbHelper;
 import io.github.sunxu3074.shoppoingdemo.db.ProductReaderContract;

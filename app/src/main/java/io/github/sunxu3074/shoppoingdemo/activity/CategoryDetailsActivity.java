@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import io.github.sunxu3074.shoppoingdemo.R;
+import io.github.sunxu3074.shoppoingdemo.base.BaseActivity;
 import io.github.sunxu3074.shoppoingdemo.consts.ConstUtils;
 import io.github.sunxu3074.shoppoingdemo.fragment.BookFragment;
 import io.github.sunxu3074.shoppoingdemo.fragment.FootWashFragment;
