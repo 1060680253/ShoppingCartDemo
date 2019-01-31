@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.github.sunxu3074.shoppoingdemo.Entity.CategoryEntity;
+import io.github.sunxu3074.shoppoingdemo.Entity.weather.WeatherData;
 import io.github.sunxu3074.shoppoingdemo.R;
 import io.github.sunxu3074.shoppoingdemo.adapter.CategoryAdapter;
 import io.github.sunxu3074.shoppoingdemo.base.BaseActivity;
@@ -32,6 +34,12 @@ public class AllActivity extends BaseActivity<ProductPresenter> implements Produ
         initViews();
         initData();
         addListeners();
+        mPresenter.getWeatherData("101030100");
+    }
+
+    @Override
+    public void onGetWeatherData(WeatherData weatherData) {
+        Toast.makeText(this,weatherData.getGanmao(),Toast.LENGTH_SHORT).show();
     }
 
     private void addListeners() {

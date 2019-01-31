@@ -16,4 +16,13 @@
         android:dividerHeight="8dp"
         />
 
+    <TextView
+        android:id="@+id/http_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sasas"
+        android:textSize="26sp"/>
 </RelativeLayout>

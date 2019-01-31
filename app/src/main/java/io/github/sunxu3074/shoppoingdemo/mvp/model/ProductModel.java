@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.sunxu3074.shoppoingdemo.Entity.CategoryEntity;
+import io.github.sunxu3074.shoppoingdemo.Entity.weather.WeatherData;
+import io.github.sunxu3074.shoppoingdemo.http.ApiClient;
 import io.github.sunxu3074.shoppoingdemo.mvp.base.ICallBack;
 import io.github.sunxu3074.shoppoingdemo.mvp.contract.ProductContract;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class ProductModel implements ProductContract.IProductModel {
 
@@ -24,5 +29,12 @@ public class ProductModel implements ProductContract.IProductModel {
         }catch (Exception e){
             callBack.onError(e.getMessage());
         }
+    }
+
+    @Override
+    public Observable<WeatherData> getWeatherData(String cityCode) {
+        return ApiClient
+                .getApiService()
+                .getRecentFiveDayWeatherData(cityCode);
     }
 }
